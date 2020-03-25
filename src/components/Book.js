@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Book = ({ book, onShelfChange }) => (
   <div className="book">
@@ -8,12 +8,14 @@ const Book = ({ book, onShelfChange }) => (
         style={{
           width: 128,
           height: 192,
-          backgroundImage: `url(${(book.imageLinks && book.imageLinks.thumbnail) || ''})`
+          backgroundImage: `url(${(book.imageLinks &&
+            book.imageLinks.thumbnail) ||
+            ''})`
         }}
       ></div>
       <div className="book-shelf-changer">
         <select
-          value={book.shelf || "none"}
+          value={book.shelf || 'none'}
           onChange={e => onShelfChange(e.target.value, book)}
         >
           <option value="move" disabled>
@@ -27,8 +29,10 @@ const Book = ({ book, onShelfChange }) => (
       </div>
     </div>
     <div className="book-title">{book.title}</div>
-    <div className="book-authors">{(book.authors && book.authors.join(', ')) || 'Author name not found'}</div>
+    <div className="book-authors">
+      {(book.authors && book.authors.join(', ')) || 'Author name not found'}
+    </div>
   </div>
-);
+)
 
-export default Book;
+export default Book

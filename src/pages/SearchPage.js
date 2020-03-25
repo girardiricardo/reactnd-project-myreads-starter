@@ -94,6 +94,6 @@ export default class SearchPage extends Component {
           </ol>
         </div>
       </div>
-    );
+    )
   }
 }

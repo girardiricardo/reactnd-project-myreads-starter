@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import Book from "./Book";
+import Book from './Book';
 
 const Shelf = ({ title, items, onShelfChange }) => (
   <div className="bookshelf">

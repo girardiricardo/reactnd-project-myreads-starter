@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
-import * as BooksAPI from "./BooksAPI";
-import HomePage from "./pages/HomePage";
-import SearchPage from "./pages/SearchPage";
+import * as BooksAPI from './BooksAPI';
+import HomePage from './pages/HomePage';
+import SearchPage from './pages/SearchPage';
 
-import "./App.css";
+import './App.css';
 
 class BooksApp extends Component {
   constructor(props) {
@@ -35,10 +35,10 @@ class BooksApp extends Component {
     BooksAPI.update(book, shelf).then(() => {
       this.setState({
         books:
-          shelf === "none"
+          shelf === 'none'
             ? filteredBooks
             : [...filteredBooks, { ...book, shelf }]
-      });
+      })
     });
   }
 
@@ -61,15 +61,15 @@ class BooksApp extends Component {
             <SearchPage
               books={books}
               onShelfChange={(shelf, book) => {
-                this.handleShelfChange(shelf, book);
-                history.push("/");
+                this.handleShelfChange(shelf, book)
+                history.push('/')
               }}
             />
           )}
         />
       </div>
-    );
+    )
   }
 }
 
-export default BooksApp;
+export default BooksApp
