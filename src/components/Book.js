@@ -8,12 +8,12 @@ const Book = ({ book, onShelfChange }) => (
         style={{
           width: 128,
           height: 192,
-          backgroundImage: `url(${book.imageLinks.thumbnail})`
+          backgroundImage: `url(${(book.imageLinks && book.imageLinks.thumbnail) || ''})`
         }}
       ></div>
       <div className="book-shelf-changer">
         <select
-          value={book.shelf || "move"}
+          value={book.shelf || "none"}
           onChange={e => onShelfChange(e.target.value, book)}
         >
           <option value="move" disabled>
