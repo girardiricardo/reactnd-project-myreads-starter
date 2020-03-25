@@ -12,6 +12,17 @@ body, .app {
 
 /* main page */
 
+.loading {
+  position: absolute;
+  background: rgba(0,0,0, 0.4);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
 .list-books-title {
   padding: 10px 0;
   background: #2e7c31;
